@@ -12,7 +12,7 @@ def index_blog(request):
 
 def category_blog(request, category):
     posts = Post.objects.filter(
-        categories__name__constains = category
+        categories__name__constain = category
     ).order_by(
         '-created_on'
     )

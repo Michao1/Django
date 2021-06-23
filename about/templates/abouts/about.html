@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h1>information</h1>
+<div class="row">
+{% if About_programer %}
+{% for information in About_programer %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <div class="card-body">
+                <h2 class="card-title">{{ information.name }}</h2>
+                <h5 class="card-text">{{ information.category }}</h5>
+                <p class="card-text">{{ information.description }}</p>
+                <p class="card-text">{{ information.programming_languages }}
+            </div>
+        </div>
+    </div>
+{% endfor %}
+{% else %}
+<p>We don't have anything here</p>
+{% endif %}
+{% endblock %}

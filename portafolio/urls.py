@@ -21,6 +21,7 @@ from django.urls.conf import include
 urlpatterns = [
     path('', include('projects.urls')),
     path('admin/', admin.site.urls),
-    path('projects/',include('projects.urls')),
-    path('blog/', include('personal_blog.urls') )
+    path('Projects/',include('projects.urls')),
+    path('Blog/', include('personal_blog.urls')),
+    path('About/', include('about.urls'))
 ]
