@@ -1,23 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<h1>Projects</h1>
+    <h1 class="translate-middle">Projects</h1>
+</div>
 <div class="row">
 {% if projects %}
 {% for project in projects %}
-    <div class="col-md-4">
-        <div class="card mb-2">
+     <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
             <img class="card-img-top" src="{% static project.image %}">
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
-                <a href="{% url 'detail' project.pk %}"
-                   class="btn btn-primary">
-                    Read More
-                </a>
+                <a href="{% url 'detail' project.pk %}"class="btn btn-primary">Read More</a>
             </div>
         </div>
-    </div>
+     </div>
 {% endfor %}
 {% else %}
 <p>We don't have anything here</p>
